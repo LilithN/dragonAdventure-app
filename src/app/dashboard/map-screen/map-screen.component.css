@@ -1,0 +1,17 @@
+div {
+  background-color: #227ca2;
+  border-color: #1c647e;
+  border-style: double;
+  border-width: .5em;
+}
+
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  color: #ffffff;
+  text-align: center;
+}
+
+agm-map {
+  height: 300px;
+  background-color: black;
+}
