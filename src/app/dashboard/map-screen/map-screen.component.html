@@ -11,13 +11,40 @@
     [mapTypeControl]="false"
     [mapTypeId]="type"
     [disableDoubleClickZoom]="true"
-    [maxZoom]="maZoom"
-    [minZoom]="miZoom"
     [scrollwheel]="false"
     [streetViewControl]="false"
     [mapDraggable]="false"
-    ></agm-map>
+    [maxZoom]="maZoom"
+    [minZoom]="miZoom"
+    >
+
+    <agm-marker *ngFor="let m of markers; let i = index"
+    (markerClick)="clickedMarker(m.label, i)"
+    [latitude]="m.lat"
+    [longitude]="m.lng"
+    [label]="m.label"
+    [markerDraggable]="m.draggable"
+    >
+
+<!-- <agm-info-window>
+  <strong>Info Window Content</strong>
+</agm-info-window> -->
+
+    </agm-marker>
+
+    <agm-circle [latitude]="lat + 0.3"
+    [longitude]="lng"
+    [radius]="5000"
+    [fillColor]="'red'"
+    [circleDraggable]="true"
+    [editable]="true">
+    </agm-circle>
+
+  </agm-map>
   </div>
+
+
+
 
 
 

@@ -5,6 +5,7 @@ import { AgmCoreModule } from '@agm/core';
 
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { MapScreenComponent } from './map-screen/map-screen.component';
+import { DragonsComponent } from './dragons/dragons.component';
 import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
 
 @NgModule({
@@ -12,8 +13,9 @@ import { UserDashboardComponent } from './user-dashboard/user-dashboard.componen
     CommonModule,
     DashboardRoutingModule,
     HttpClientModule,
+    DragonsComponent,
     AgmCoreModule.forRoot({
-      apiKey: 'insert google bought key here'
+      apiKey: 'Inter your API Key Here'
     })
   ],
   declarations: [MapScreenComponent, UserDashboardComponent]
