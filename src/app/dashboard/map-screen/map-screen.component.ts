@@ -3,6 +3,7 @@ import { MouseEvent } from '@agm/core';
 
 
 
+
 @Component({
   selector: 'da-map-screen',
   templateUrl: './map-screen.component.html',
@@ -42,6 +43,7 @@ export class MapScreenComponent {
   clickedMarker(label: string, index: number) {
     console.log(`clicked the marker: ${label || index}`);
   }
+
 
 }
 

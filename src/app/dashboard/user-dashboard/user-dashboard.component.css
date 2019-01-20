@@ -5,3 +5,7 @@ div {
 p {
   color: white;
 }
+
+#dragonInfo {
+  display: none;
+}
