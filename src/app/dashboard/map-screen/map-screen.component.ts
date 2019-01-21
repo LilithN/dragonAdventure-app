@@ -46,10 +46,13 @@ export class MapScreenComponent {
 
   specificClick(label: string) {
     if (label === 'Nadder') {
+      document.getElementById('changeText').innerHTML = 'Nadder text!';
       console.log('clicked on Nadder specifically');
     } else if (label === 'Thunderdrum') {
+      document.getElementById('changeText').innerHTML = 'Thunderdrum text!';
       console.log('clicked on Thunderdrum specifically');
     } else if (label === 'Dramillion') {
+      document.getElementById('changeText').innerHTML = 'Dramillion text!';
       console.log('clicked on Dramillion specifically');
     } else {
       console.log('other');
