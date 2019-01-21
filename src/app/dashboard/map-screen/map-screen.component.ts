@@ -44,6 +44,18 @@ export class MapScreenComponent {
     console.log(`clicked the marker: ${label || index}`);
   }
 
+  specificClick(label: string) {
+    if (label === 'Nadder') {
+      console.log('clicked on Nadder specifically');
+    } else if (label === 'Thunderdrum') {
+      console.log('clicked on Thunderdrum specifically');
+    } else if (label === 'Dramillion') {
+      console.log('clicked on Dramillion specifically');
+    } else {
+      console.log('other');
+    }
+  }
+
 
 }
 
