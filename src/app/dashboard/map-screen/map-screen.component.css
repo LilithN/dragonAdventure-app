@@ -16,4 +16,67 @@ agm-map {
   background-color: black;
 }
 
+/* Nadder */
+#nadderTextBlock {
+  display: none;
+}
+
+/* #nadderMainText {
+  display: none;
+} */
+
+#nadderText1 {
+  display: none;
+}
+
+#nadderText2 {
+  display: none;
+}
+
+#nadderText3 {
+  display: none;
+}
+
+/* Dramillion */
+#dramillionTextBlock {
+  display: none;
+}
+
+/* #dramillionMainText {
+  display: none;
+} */
+
+#dramillionText1 {
+  display: none;
+}
+
+#dramillionText2 {
+  display: none;
+}
+
+#dramillionText3 {
+  display: none;
+}
+
+/* Thunderdrum */
+#thunderdrumTextBlock {
+  display: none;
+}
+
+/* #thunderdrumMainText {
+  display: none;
+} */
+
+#thunderdrumText1 {
+  display: none;
+}
+
+#thunderdrumText2 {
+  display: none;
+}
+
+#thunderdrumText3 {
+  display: none;
+}
+
 

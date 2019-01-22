@@ -1,19 +1,72 @@
 import { Component } from '@angular/core';
 import { MouseEvent } from '@agm/core';
 
+// const randomNumber = Math.round( Math.random() * 2 );
+
 // Nadder JavaScript Data
 function nadder () {
-  document.getElementById('changeText').innerHTML = 'Nadder text!';
+  const nadderNumber = Math.round( Math.random() * 2 );
+  document.getElementById('nadderTextBlock').style.display = 'inline-block';
+  document.getElementById('dramillionTextBlock').style.display = 'none';
+    document.getElementById('thunderdrumTextBlock').style.display = 'none';
+  if (nadderNumber === 0) {
+    document.getElementById('nadderText1').style.display = 'inline-block';
+    document.getElementById('nadderText2').style.display = 'none';
+    document.getElementById('nadderText3').style.display = 'none';
+  } else if (nadderNumber === 1) {
+    document.getElementById('nadderText1').style.display = 'none';
+    document.getElementById('nadderText2').style.display = 'inline-block';
+    document.getElementById('nadderText3').style.display = 'none';
+  } else {
+    document.getElementById('nadderText1').style.display = 'none';
+    document.getElementById('nadderText2').style.display = 'none';
+    document.getElementById('nadderText3').style.display = 'inline-block';
+  }
+  console.log (nadderNumber);
 }
 
 // Dramillion JavaScript Data
 function dramillion () {
-  document.getElementById('changeText').innerHTML = 'Dramillion text!';
-}
+  const dramillionNumber = Math.round( Math.random() * 2 );
+  document.getElementById('dramillionTextBlock').style.display = 'inline-block';
+  document.getElementById('nadderTextBlock').style.display = 'none';
+    document.getElementById('thunderdrumTextBlock').style.display = 'none';
+  if (dramillionNumber === 0) {
+    document.getElementById('dramillionText1').style.display = 'inline-block';
+    document.getElementById('dramillionText2').style.display = 'none';
+    document.getElementById('dramillionText3').style.display = 'none';
+  } else if (dramillionNumber === 1) {
+    document.getElementById('dramillionText1').style.display = 'none';
+    document.getElementById('dramillionText2').style.display = 'inline-block';
+    document.getElementById('dramillionText3').style.display = 'none';
+  } else {
+    document.getElementById('dramillionText1').style.display = 'none';
+    document.getElementById('dramillionText2').style.display = 'none';
+    document.getElementById('dramillionText3').style.display = 'inline-block';
+  }
+  console.log (dramillionNumber);
+  }
 
 // Thunderdrum JavaScript Data
 function thunderdrum () {
-  document.getElementById('changeText').innerHTML = 'Thunderdrum text!';
+  const thunderdrumNumber = Math.round( Math.random() * 2 );
+  document.getElementById('thunderdrumTextBlock').style.display = 'inline-block';
+  document.getElementById('dramillionTextBlock').style.display = 'none';
+    document.getElementById('nadderTextBlock').style.display = 'none';
+  if (thunderdrumNumber === 0) {
+    document.getElementById('thunderdrumText1').style.display = 'inline-block';
+    document.getElementById('thunderdrumText2').style.display = 'none';
+    document.getElementById('thunderdrumText3').style.display = 'none';
+  } else if (thunderdrumNumber === 1) {
+    document.getElementById('thunderdrumText1').style.display = 'none';
+    document.getElementById('thunderdrumText2').style.display = 'inline-block';
+    document.getElementById('thunderdrumText3').style.display = 'none';
+  } else {
+    document.getElementById('thunderdrumText1').style.display = 'none';
+    document.getElementById('thunderdrumText2').style.display = 'none';
+    document.getElementById('thunderdrumText3').style.display = 'inline-block';
+  }
+  console.log (thunderdrumNumber);
 }
 
 

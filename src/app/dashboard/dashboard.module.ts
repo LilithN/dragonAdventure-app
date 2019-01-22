@@ -14,7 +14,7 @@ import { DragonInfoComponent } from './dragon-info/dragon-info.component';
     DashboardRoutingModule,
     HttpClientModule,
     AgmCoreModule.forRoot({
-      apiKey: ''
+      apiKey: 'Insert your API key here'
     })
   ],
   declarations: [MapScreenComponent, UserDashboardComponent, DragonInfoComponent]
