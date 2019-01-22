@@ -1,3 +1,7 @@
+<p>It's your sixteenth birthday and your rite of passage is to go find and tame a dragon. You are wandering in the deep wilderness of one of the islands next to your village.</p>
+
+<p id="changeText"></p>
+
 <div>
   <h2>
     map-screen
@@ -19,7 +23,7 @@
     >
 
     <agm-marker *ngFor="let m of markers; let i = index"
-    (markerClick)="specificClick(m.label)"
+    (markerClick)="dragonClick(m.label)"
     [latitude]="m.lat"
     [longitude]="m.lng"
     [label]="m.label"
@@ -45,7 +49,7 @@
   </agm-map>
   </div>
 
-<p id="changeText"></p>
+
 
 
 

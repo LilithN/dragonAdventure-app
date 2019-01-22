@@ -1,7 +1,20 @@
 import { Component } from '@angular/core';
 import { MouseEvent } from '@agm/core';
 
+// Nadder JavaScript Data
+function nadder () {
+  document.getElementById('changeText').innerHTML = 'Nadder text!';
+}
 
+// Dramillion JavaScript Data
+function dramillion () {
+  document.getElementById('changeText').innerHTML = 'Dramillion text!';
+}
+
+// Thunderdrum JavaScript Data
+function thunderdrum () {
+  document.getElementById('changeText').innerHTML = 'Thunderdrum text!';
+}
 
 
 @Component({
@@ -33,6 +46,8 @@ export class MapScreenComponent {
     }
   ];
 
+/* Map information */
+
   zoom = 11;
   lat = 22.104736;
   lng = -77.924937;
@@ -40,27 +55,30 @@ export class MapScreenComponent {
   maZoom = 11;
   miZoom = 11;
 
-  clickedMarker(label: string, index: number) {
+ /*  clickedMarker(label: string, index: number) {
     console.log(`clicked the marker: ${label || index}`);
-  }
+  } */
 
-  specificClick(label: string) {
+/* Dragon marker click functions */
+
+  dragonClick(label: string) {
     if (label === 'Nadder') {
-      document.getElementById('changeText').innerHTML = 'Nadder text!';
-      console.log('clicked on Nadder specifically');
+      console.log('clicked on Nadder');
+      nadder();
     } else if (label === 'Thunderdrum') {
-      document.getElementById('changeText').innerHTML = 'Thunderdrum text!';
-      console.log('clicked on Thunderdrum specifically');
+      console.log('clicked on Thunderdrum');
+      thunderdrum();
     } else if (label === 'Dramillion') {
-      document.getElementById('changeText').innerHTML = 'Dramillion text!';
-      console.log('clicked on Dramillion specifically');
+      console.log('clicked on Dramillion');
+      dramillion();
     } else {
       console.log('other');
     }
   }
 
-
 }
+
+
 
 interface marker {
   lat: number;
