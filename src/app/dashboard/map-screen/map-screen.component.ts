@@ -4,7 +4,7 @@ import { MouseEvent } from '@agm/core';
 // const randomNumber = Math.round( Math.random() * 2 );
 
 // Nadder JavaScript Data
-function nadder () {
+/* function nadder () {
   const nadderNumber = Math.round( Math.random() * 2 );
   document.getElementById('nadderTextBlock').style.display = 'inline-block';
   document.getElementById('dramillionTextBlock').style.display = 'none';
@@ -23,10 +23,10 @@ function nadder () {
     document.getElementById('nadderText3').style.display = 'inline-block';
   }
   console.log (nadderNumber);
-}
+} */
 
 // Dramillion JavaScript Data
-function dramillion () {
+/* function dramillion () {
   const dramillionNumber = Math.round( Math.random() * 2 );
   document.getElementById('dramillionTextBlock').style.display = 'inline-block';
   document.getElementById('nadderTextBlock').style.display = 'none';
@@ -45,10 +45,10 @@ function dramillion () {
     document.getElementById('dramillionText3').style.display = 'inline-block';
   }
   console.log (dramillionNumber);
-  }
+  } */
 
 // Thunderdrum JavaScript Data
-function thunderdrum () {
+/* function thunderdrum () {
   const thunderdrumNumber = Math.round( Math.random() * 2 );
   document.getElementById('thunderdrumTextBlock').style.display = 'inline-block';
   document.getElementById('dramillionTextBlock').style.display = 'none';
@@ -67,7 +67,7 @@ function thunderdrum () {
     document.getElementById('thunderdrumText3').style.display = 'inline-block';
   }
   console.log (thunderdrumNumber);
-}
+} */
 
 
 @Component({
@@ -84,7 +84,7 @@ export class MapScreenComponent {
       lng: -77.891641,
       label: 'Nadder',
       draggable: false
-    },
+    }/* ,
     {
       lat: 22.124670,
       lng: -77.980897,
@@ -96,7 +96,7 @@ export class MapScreenComponent {
       lng: -77.860257,
       label: 'Dramillion',
       draggable: false
-    }
+    } */
   ];
 
 /* Map information */
@@ -107,6 +107,7 @@ export class MapScreenComponent {
   type = 'satellite';
   maZoom = 11;
   miZoom = 11;
+  showDragons = false;
 
  /*  clickedMarker(label: string, index: number) {
     console.log(`clicked the marker: ${label || index}`);
@@ -114,7 +115,7 @@ export class MapScreenComponent {
 
 /* Dragon marker click functions */
 
-  dragonClick(label: string) {
+/*   dragonClick(label: string) {
     if (label === 'Nadder') {
       console.log('clicked on Nadder');
       nadder();
@@ -127,7 +128,17 @@ export class MapScreenComponent {
     } else {
       console.log('other');
     }
+  } */
+dragonClick(label: string) {
+  const nadderNumber = Math.round( Math.random() * 2 );
+  if (nadderNumber === 1) {
+    console.log(nadderNumber);
+    return this.showDragons;
+  } else {
+    console.log(nadderNumber);
   }
+}
+
 
 }
 

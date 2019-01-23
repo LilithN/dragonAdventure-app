@@ -1,28 +1,30 @@
 <p>It's your sixteenth birthday and your rite of passage is to go find and tame a dragon. You are wandering in the deep wilderness of one of the islands next to your village.</p>
 
 <!-- Nadder Text -->
-<div id="nadderTextBlock">
+<!-- <div id="nadderTextBlock">
 <p id="nadderMainText">You spot something on a boulder not far from your location. You came across a Nadder. They are known for their enhanced speed and incredible sense of smell. They have a habit of shooting spines from their tails which are coated with venom and breathe magnesiam fire. They have one of the hottest fire breaths. This Nadder is a pretty sky blue with a dark purple underbelly. As you continue to study the Nadder, you realize the sex is female and she looks to be a young adult.</p>
 <p id="nadderText1">You sneak up close to the Nadder.<br> The Nadder is a little reluctant but seems to be swayed.<br> The Nadder follows you on the rest of your journey.</p>
 <p id="nadderText2">As you sneak closer, you slip on a set of small rocks. The Nadder hears you, gives a hiss, and flys off to a different location. Looks like you will have to set up base and try again another day.</p>
 <p id="nadderText3">The Nadder spots you and hisses. You are envading its territory. The Nadder swings its tail in your direction and one of the spines hits you. You realize you were not as prepared as you hoped you were.</p>
-</div>
+</div> -->
 
 <!-- Dramillion Text -->
-<div id="dramillionTextBlock">
+<!-- <div id="dramillionTextBlock">
 <p id="dramillionMainText">You hear something rustling in the leaves of a tree above you. You came across a Dramillion. They like to mimic the fire of other dragons and have camouflage to a degree. Other dragons can share their fire with the Dramillion which allows it to breathe more fire. They are very quick and agile as well as highly intelligent. This Dramillion is a dark blue with black stripes. On further study, you realize the Dramillion is a male youngling.</p>
 <p id="dramillionText1">You throw your weapon at him in hopes to get him out of the tree.<br>The Dramillion crashes through the branches and lands with a thud on the ground. He looks at you with big eyes and mews. Being far away from his pack, the Dramillion is happy to be apart of a new pack, even if you are human.</p>
 <p id="dramillionText2">You throw your weapon at him in hopes to get him out of the tree.<br>The Dramillion sees the weapon being thrown at him and jumps. His little wings flap rapidly as he bounds from tree to tree and away from you. You lose sight of him as he bounds away. You have to think of a better way to get the little bugger.</p>
 <p id="dramillionText3">You throw your weapon at him in hopes to get him out of the tree.<br>The Dramillion jumps to a different branch and dodges your weapon. He lets out a screech and soon after, you hear more screeches echoing his. Five Dramillion heads pop out of the leaves. Their various hisses and yowls become sound numbing. The Dramillions jump towards you. Six Dramillions are too many to handle for someone new to capturing dragons, even if they are younglings. You turn steadfast and run, hoping the little tykes won't follow.</p>
-</div>
+</div> -->
 
 <!-- Thunderdrum Text -->
-<div id="thunderdrumTextBlock">
+<!-- <div id="thunderdrumTextBlock">
 <p id="thunderdrumMainText">You wander over to a small beach where you see a Thunderdrum coming out of the water and onto the sand. Thunderdrums can expel air from its body to be able to swim. Their main attack of choice is a sonic blast, but they are nearly deaf so targeting is a little off. This Thunderdrum is a lime green with a white belly. It sticks its nose in the sand and pushes it around with its snout. You examine the Thunderdrum and figure out it is an adolescent female.</p>
 <p id="thunderdrumText1">The sand squishes under your feet as you slowly walk forward with your weapon in hand.<br>Before you are able to use your weapon however, the Thunderdrum smells you and looks your way. She is as curious as a cat and inches towards you, snout in the air, trying to figure out what kind of creature you are. She then does a roll and chirps at you before taking the last few feet towards you. She doesn't see you as a threat and bounds happily around you in circles. Looks like you made a new friend.</p>
 <p id="thunderdrumText2">The sand squishes under your feet as you slowly walk forward with your weapon in hand.<br>You hear loud gusts of wind as a Typhoomerang lands on the sand next to the Thunderdrum. Typhoomerangs are fiery, passionate, hot headed, and rather territorial. The Typhoomerang is one hundred nine feet long and too much for an amateur like yourself to handle. The Thunderdrum sqwaks at the Typhoomerang then turns tail and runs away. You follow by example as you slowly back up, turn, and make your way back into the woods before the Typhoomerang can sense you.</p>
 <p id="thunderdrumText3">The sand squishes under your feet as you slowly walk forward with your weapon in hand. You throw the weapon in hopes to knock the Thunderdrum off its feet.<br>Your weapon proves unnsuccessful and the Thunderdrum snorts at you. She closely examines you and hisses. She senses danger and rallys to attack, shooting a sonic blast your way. With a roaring Thunderdrum itching to attack, you have no choice but to turn and run. You just hope one of the sonic blasts don't get to you before you make it to safety.</p>
-</div>
+</div> -->
+
+<p *ngIf="showDragons">Stuff and things</p>
 
 <div>
   <h2>
@@ -45,7 +47,7 @@
     >
 
     <agm-marker *ngFor="let m of markers; let i = index"
-    (markerClick)="dragonClick(m.label)"
+    (markerClick)="dragonClick(m.label); showDragons = !showDragons"
     [latitude]="m.lat"
     [longitude]="m.lng"
     [label]="m.label"

@@ -16,16 +16,16 @@ agm-map {
   background-color: black;
 }
 
-/* Nadder */
-#nadderTextBlock {
+/* Nadder  */
+/*  #nadderTextBlock {
   display: none;
 }
 
-/* #nadderMainText {
+#nadderMainText {
   display: none;
-} */
+}
 
-#nadderText1 {
+ #nadderText1 {
   display: none;
 }
 
@@ -35,7 +35,7 @@ agm-map {
 
 #nadderText3 {
   display: none;
-}
+} */
 
 /* Dramillion */
 #dramillionTextBlock {
@@ -67,7 +67,7 @@ agm-map {
   display: none;
 } */
 
-#thunderdrumText1 {
+/* #thunderdrumText1 {
   display: none;
 }
 
@@ -77,6 +77,6 @@ agm-map {
 
 #thunderdrumText3 {
   display: none;
-}
+} */
 
 
