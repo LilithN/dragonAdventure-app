@@ -1,8 +1,29 @@
+article {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  margin-left: 10%;
+}
+
+#testingInfo {
+  width: 40%;
+  margin-right: 10%;
+}
+
+#map {
+  width: 40%;
+  margin-left: 10%;
+}
+
 div {
   background-color: #227ca2;
-  border-color: #1c647e;
-  border-style: double;
-  border-width: .5em;
+  /* border-color: #1c647e; */
+  /* border-style: double; */
+  /* border-width: .5em; */
 }
 
 h2 {
@@ -12,9 +33,13 @@ h2 {
 }
 
 agm-map {
-  height: 300px;
+  height: 450px;
   background-color: black;
+
 }
+
+
+
 
 /* Nadder  */
 /*  #nadderTextBlock {
