@@ -1,11 +1,9 @@
-<p>It's your sixteenth birthday and your rite of passage is to go find and tame a dragon. You are wandering in the deep wilderness of one of the islands next to your village.</p>
-
 <!-- Nadder Text -->
 <!-- <div id="nadderTextBlock">
-<p id="nadderMainText">You spot something on a boulder not far from your location. You came across a Nadder. They are known for their enhanced speed and incredible sense of smell. They have a habit of shooting spines from their tails which are coated with venom and breathe magnesiam fire. They have one of the hottest fire breaths. This Nadder is a pretty sky blue with a dark purple underbelly. As you continue to study the Nadder, you realize the sex is female and she looks to be a young adult.</p>
-<p id="nadderText1">You sneak up close to the Nadder.<br> The Nadder is a little reluctant but seems to be swayed.<br> The Nadder follows you on the rest of your journey.</p>
-<p id="nadderText2">As you sneak closer, you slip on a set of small rocks. The Nadder hears you, gives a hiss, and flys off to a different location. Looks like you will have to set up base and try again another day.</p>
-<p id="nadderText3">The Nadder spots you and hisses. You are envading its territory. The Nadder swings its tail in your direction and one of the spines hits you. You realize you were not as prepared as you hoped you were.</p>
+
+
+
+
 </div> -->
 
 <!-- Dramillion Text -->
@@ -24,60 +22,53 @@
 <p id="thunderdrumText3">The sand squishes under your feet as you slowly walk forward with your weapon in hand. You throw the weapon in hopes to knock the Thunderdrum off its feet.<br>Your weapon proves unnsuccessful and the Thunderdrum snorts at you. She closely examines you and hisses. She senses danger and rallys to attack, shooting a sonic blast your way. With a roaring Thunderdrum itching to attack, you have no choice but to turn and run. You just hope one of the sonic blasts don't get to you before you make it to safety.</p>
 </div> -->
 
-<p *ngIf="showDragons">Stuff and things</p>
 
-<div>
-  <h2>
-    map-screen
-  </h2>
-  <agm-map
-    [latitude]="lat"
-    [longitude]="lng"
-    [zoom]="zoom"
-    [disableDefaultUI]="false"
-    [zoomControl]="false"
-    [mapTypeControl]="false"
-    [mapTypeId]="type"
-    [disableDoubleClickZoom]="true"
-    [scrollwheel]="false"
-    [streetViewControl]="false"
-    [mapDraggable]="false"
-    [maxZoom]="maZoom"
-    [minZoom]="miZoom"
-    >
+<article>
 
-    <agm-marker *ngFor="let m of markers; let i = index"
-    (markerClick)="dragonClick(m.label); showDragons = !showDragons"
-    [latitude]="m.lat"
-    [longitude]="m.lng"
-    [label]="m.label"
-    [markerDraggable]="m.draggable"
-    >
+  <div id="map">
+    <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom" [disableDefaultUI]="false" [zoomControl]="false"
+      [mapTypeControl]="false" [mapTypeId]="type" [disableDoubleClickZoom]="true" [scrollwheel]="false"
+      [streetViewControl]="false" [mapDraggable]="false" [maxZoom]="maZoom" [minZoom]="miZoom">
 
-<!-- <agm-info-window>
-  <strong>Info Window Content</strong>
-</agm-info-window> -->
+      <div id="nadderMapMarker" *ngIf="visibility">
+        <agm-marker *ngFor="let m of markers; let i = index" (markerClick)="nadderClick(m.label)" [latitude]="m.lat"
+          [longitude]="m.lng" [label]="m.label" [markerDraggable]="m.draggable" [visible]="m.visible">
+        </agm-marker>
+      </div>
 
-<!-- (markerClick)="clickedMarker(m.label, i)" -->
+      <agm-circle [latitude]="lat + 0.3" [longitude]="lng" [radius]="5000" [fillColor]="'red'" [circleDraggable]="true"
+        [editable]="true">
+      </agm-circle>
 
-    </agm-marker>
-
-    <agm-circle [latitude]="lat + 0.3"
-    [longitude]="lng"
-    [radius]="5000"
-    [fillColor]="'red'"
-    [circleDraggable]="true"
-    [editable]="true">
-    </agm-circle>
-
-  </agm-map>
+    </agm-map>
   </div>
 
+  <div id="testingInfo">
+    <p>It's your sixteenth birthday and your rite of passage is to go find and tame a dragon.
+      You are wandering in the deep wilderness of one of the islands next to your village.</p>
 
 
+    <!-- Nadder Info -->
+    <p *ngIf="nadderStory">You spot something on a boulder not far from your location. You came across a Nadder.
+      They are known for their enhanced speed and incredible sense of smell. They have a habit of shooting spines from
+      their tails which are coated with venom and breathe magnesiam fire.
+      They have one of the hottest fire breaths. This Nadder is a pretty sky blue with a dark purple underbelly.
+      As you continue to study the Nadder, you realize the sex is female and she looks to be a young adult.</p>
 
+    <p *ngIf="nadderZero">You sneak up close to the Nadder.<br>
+      The Nadder is a little reluctant but seems to be swayed.<br>
+      The Nadder follows you on the rest of your journey.</p>
 
+    <p *ngIf="nadderOne">As you sneak closer, you slip on a set of small rocks. The Nadder hears you, gives a hiss, and
+      flys off to a different location. Looks like you will have to set up base and try again another day.</p>
 
+    <p *ngIf="nadderTwo">The Nadder spots you and hisses. You are envading its territory. The Nadder swings its tail
+      in your direction and one of the spines hits you. You realize you were not as prepared as you hoped you were.</p>
 
+    <!-- Dramillion Info -->
 
+    <!-- Thunderdrum Info -->
 
+  </div>
+
+</article>

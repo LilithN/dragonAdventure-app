@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MouseEvent } from '@agm/core';
+import { MouseEvent, MarkerManager } from '@agm/core';
 
 // const randomNumber = Math.round( Math.random() * 2 );
 
@@ -78,12 +78,13 @@ import { MouseEvent } from '@agm/core';
 
 export class MapScreenComponent {
 
-  markers: marker[] = [
+  markers: Marker[] = [
     {
       lat: 22.128090,
       lng: -77.891641,
       label: 'Nadder',
-      draggable: false
+      draggable: false,
+      visible: true
     }/* ,
     {
       lat: 22.124670,
@@ -99,7 +100,7 @@ export class MapScreenComponent {
     } */
   ];
 
-/* Map information */
+  /* Map information */
 
   zoom = 11;
   lat = 22.104736;
@@ -107,47 +108,61 @@ export class MapScreenComponent {
   type = 'satellite';
   maZoom = 11;
   miZoom = 11;
-  showDragons = false;
+  nadderStory = false;
+  nadderZero = false;
+  nadderOne = false;
+  nadderTwo = false;
+  visibility = true;
 
- /*  clickedMarker(label: string, index: number) {
+
+  /*  clickedMarker(label: string, index: number) {
+     console.log(`clicked the marker: ${label || index}`);
+   } */
+
+  /* Dragon marker click functions */
+
+  /*   dragonClick(label: string) {
+      if (label === 'Nadder') {
+        console.log('clicked on Nadder');
+        nadder();
+      } else if (label === 'Thunderdrum') {
+        console.log('clicked on Thunderdrum');
+        thunderdrum();
+      } else if (label === 'Dramillion') {
+        console.log('clicked on Dramillion');
+        dramillion();
+      } else {
+        console.log('other');
+      }
+    } */
+  nadderClick(label: string, visible: boolean, index: number) {
+    const nadderNumber = Math.round(Math.random() * 2);
     console.log(`clicked the marker: ${label || index}`);
-  } */
-
-/* Dragon marker click functions */
-
-/*   dragonClick(label: string) {
-    if (label === 'Nadder') {
-      console.log('clicked on Nadder');
-      nadder();
-    } else if (label === 'Thunderdrum') {
-      console.log('clicked on Thunderdrum');
-      thunderdrum();
-    } else if (label === 'Dramillion') {
-      console.log('clicked on Dramillion');
-      dramillion();
+    if (nadderNumber === 1) {
+      console.log(nadderNumber);
+      this.nadderStory = true;
+      this.nadderOne = true;
+      this.visibility = false;
+    } else if (nadderNumber === 2) {
+      console.log(nadderNumber);
+      this.nadderStory = true;
+      this.nadderTwo = true;
     } else {
-      console.log('other');
+      console.log(nadderNumber);
+      this.nadderStory = true;
+      this.nadderZero = true;
     }
-  } */
-dragonClick(label: string) {
-  const nadderNumber = Math.round( Math.random() * 2 );
-  if (nadderNumber === 1) {
-    console.log(nadderNumber);
-    return this.showDragons;
-  } else {
-    console.log(nadderNumber);
   }
-}
-
 
 }
 
 
 
-interface marker {
+interface Marker {
   lat: number;
   lng: number;
   label?: string;
   draggable: boolean;
+  visible: boolean;
 }
 
