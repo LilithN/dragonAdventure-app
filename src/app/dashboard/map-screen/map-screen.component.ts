@@ -115,6 +115,8 @@ export class MapScreenComponent {
   visibility = true;
 
 
+
+
   /*  clickedMarker(label: string, index: number) {
      console.log(`clicked the marker: ${label || index}`);
    } */
@@ -135,6 +137,9 @@ export class MapScreenComponent {
         console.log('other');
       }
     } */
+
+
+
   nadderClick(label: string, visible: boolean, index: number) {
     const nadderNumber = Math.round(Math.random() * 2);
     console.log(`clicked the marker: ${label || index}`);
@@ -142,7 +147,7 @@ export class MapScreenComponent {
       console.log(nadderNumber);
       this.nadderStory = true;
       this.nadderOne = true;
-      this.visibility = false;
+      // this.visibility = false;
     } else if (nadderNumber === 2) {
       console.log(nadderNumber);
       this.nadderStory = true;
