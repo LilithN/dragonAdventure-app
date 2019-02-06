@@ -84,21 +84,19 @@ export class MapScreenComponent {
     this.nInfo = true;
     this.dInfo = false;
     this.tInfo = false;
+    this.nadderStory = true;
     if (randomNumber === 1) {
       console.log(randomNumber);
-      this.nadderStory = true;
       this.nadderOne = true;
       this.nadderTwo = false;
       this.nadderZero = false;
     } else if (randomNumber === 2) {
       console.log(randomNumber);
-      this.nadderStory = true;
       this.nadderOne = false;
       this.nadderTwo = true;
       this.nadderZero = false;
     } else {
       console.log(randomNumber);
-      this.nadderStory = true;
       this.nadderOne = false;
       this.nadderTwo = false;
       this.nadderZero = true;
@@ -111,21 +109,19 @@ export class MapScreenComponent {
     this.nInfo = false;
     this.dInfo = true;
     this.tInfo = false;
+    this.dramillionStory = true;
     if (randomNumber === 1) {
       console.log(randomNumber);
-      this.dramillionStory = true;
       this.dramillionOne = true;
       this.dramillionTwo = false;
       this.dramillionZero = false;
     } else if (randomNumber === 2) {
       console.log(randomNumber);
-      this.dramillionStory = true;
       this.dramillionOne = false;
       this.dramillionTwo = true;
       this.dramillionZero = false;
     } else {
       console.log(randomNumber);
-      this.dramillionStory = true;
       this.dramillionOne = false;
       this.dramillionTwo = false;
       this.dramillionZero = true;
@@ -138,21 +134,19 @@ export class MapScreenComponent {
     this.nInfo = false;
     this.dInfo = false;
     this.tInfo = true;
+    this.thunderdrumStory = true;
     if (randomNumber === 1) {
       console.log(randomNumber);
-      this.thunderdrumStory = true;
       this.thunderdrumOne = true;
       this.thunderdrumTwo = false;
       this.thunderdrumZero = false;
     } else if (randomNumber === 2) {
       console.log(randomNumber);
-      this.thunderdrumStory = true;
       this.thunderdrumOne = false;
       this.thunderdrumTwo = true;
       this.thunderdrumZero = false;
     } else {
       console.log(randomNumber);
-      this.thunderdrumStory = true;
       this.thunderdrumOne = false;
       this.thunderdrumTwo = false;
       this.thunderdrumZero = true;
