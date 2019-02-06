@@ -1,4 +1,4 @@
-article {
+#flexContainer {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -9,7 +9,19 @@ p {
   margin-left: 10%;
 }
 
-#testingInfo {
+#nInfo {
+  color: white;
+}
+
+#dInfo {
+  color: purple;
+}
+
+#tInfo {
+  color: red;
+}
+
+#storyInfo {
   width: 40%;
   margin-right: 10%;
 }
