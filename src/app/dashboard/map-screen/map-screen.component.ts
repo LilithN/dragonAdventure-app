@@ -67,89 +67,131 @@ export class MapScreenComponent {
   thunderdrumOne = false;
   thunderdrumTwo = false;
   nadderVisibility = true;
-  dramillionVisibility = true;
-  thunderdrumVisibility = true;
+  dramillionVisibility = false;
+  thunderdrumVisibility = false;
   nInfo = false;
   dInfo = false;
   tInfo = false;
-
+  tester = false;
 
 
   // Click Events
 
 
   nadderClick(label: string, visible: boolean, index: number) {
-    const randomNumber = Math.round(Math.random() * 2);
+    const nadNumber = Math.round(Math.random() * 2);
     console.log(`clicked the marker: ${label || index}`);
+    console.log('The random story number is ' + nadNumber);
     this.nInfo = true;
     this.dInfo = false;
     this.tInfo = false;
     this.nadderStory = true;
-    if (randomNumber === 1) {
-      console.log(randomNumber);
+    if (nadNumber === 1) {
       this.nadderOne = true;
       this.nadderTwo = false;
       this.nadderZero = false;
-    } else if (randomNumber === 2) {
-      console.log(randomNumber);
+      this.tester = false;
+      this.mVisible();
+    } else if (nadNumber === 2) {
       this.nadderOne = false;
       this.nadderTwo = true;
       this.nadderZero = false;
+      this.tester = false;
+      this.mVisible();
     } else {
-      console.log(randomNumber);
       this.nadderOne = false;
       this.nadderTwo = false;
       this.nadderZero = true;
+      /* this.nadderVisibility = false;
+      this.dramillionVisibility = true;
+      this.thunderdrumVisibility = false; */
+      this.tester = true;
+      // this.mVisible();
     }
   }
 
   dramillionClick(label: string, visible: boolean, index: number) {
-    const randomNumber = Math.round(Math.random() * 2);
+    const dramNumber = Math.round(Math.random() * 2);
     console.log(`clicked the marker: ${label || index}`);
+    console.log('The random story number is ' + dramNumber);
     this.nInfo = false;
     this.dInfo = true;
     this.tInfo = false;
     this.dramillionStory = true;
-    if (randomNumber === 1) {
-      console.log(randomNumber);
+    if (dramNumber === 1) {
       this.dramillionOne = true;
       this.dramillionTwo = false;
       this.dramillionZero = false;
-    } else if (randomNumber === 2) {
-      console.log(randomNumber);
+      this.tester = false;
+      this.mVisible();
+    } else if (dramNumber === 2) {
       this.dramillionOne = false;
       this.dramillionTwo = true;
       this.dramillionZero = false;
+      this.tester = false;
+      this.mVisible();
     } else {
-      console.log(randomNumber);
       this.dramillionOne = false;
       this.dramillionTwo = false;
       this.dramillionZero = true;
+      /* this.nadderVisibility = false;
+      this.dramillionVisibility = false;
+      this.thunderdrumVisibility = true; */
+      this.tester = true;
+      // this.mVisible();
     }
   }
 
   thunderdrumClick(label: string, visible: boolean, index: number) {
-    const randomNumber = Math.round(Math.random() * 2);
+    const thunNumber = Math.round(Math.random() * 2);
     console.log(`clicked the marker: ${label || index}`);
+    console.log('The random story number is ' + thunNumber);
     this.nInfo = false;
     this.dInfo = false;
     this.tInfo = true;
     this.thunderdrumStory = true;
-    if (randomNumber === 1) {
-      console.log(randomNumber);
+    if (thunNumber === 1) {
       this.thunderdrumOne = true;
       this.thunderdrumTwo = false;
       this.thunderdrumZero = false;
-    } else if (randomNumber === 2) {
-      console.log(randomNumber);
+      this.tester = false;
+      this.mVisible();
+    } else if (thunNumber === 2) {
       this.thunderdrumOne = false;
       this.thunderdrumTwo = true;
       this.thunderdrumZero = false;
+      this.tester = false;
+      this.mVisible();
     } else {
-      console.log(randomNumber);
       this.thunderdrumOne = false;
       this.thunderdrumTwo = false;
       this.thunderdrumZero = true;
+      /* this.nadderVisibility = true;
+      this.dramillionVisibility = false;
+      this.thunderdrumVisibility = false; */
+      this.tester = true;
+      // this.mVisible();
+    }
+  }
+
+  // Marker Visibility Function
+  mVisible() {
+    const visNumber = Math.round(Math.random() * 2);
+    console.log('The random visibility number is ' + visNumber);
+    if (visNumber === 1 && this.tester === false) {
+      this.nadderVisibility = false;
+      this.dramillionVisibility = true;
+      this.thunderdrumVisibility = false;
+    } else if (visNumber === 2 && this.tester === false) {
+      this.nadderVisibility = true;
+      this.dramillionVisibility = false;
+      this.thunderdrumVisibility = false;
+    } else if (visNumber === 0 && this.tester === false) {
+      this.nadderVisibility = false;
+      this.dramillionVisibility = false;
+      this.thunderdrumVisibility = true;
+    } else {
+      console.log('End of route');
     }
   }
 
