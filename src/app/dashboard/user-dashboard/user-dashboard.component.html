@@ -1,8 +1,17 @@
-<p>
-  user-dashboard works!
-</p>
+<nav>
+<h1>"Where Be Dragons!"</h1>
+</nav>
+
+<p>Project bio</p>
+
+<article *ngIf="buttons">
+  <button id="rulesButton" (click)="rulesButton()">{{ buttonName }}</button>
+  <button id="startButton" (click)="startButton()">Start</button>
+</article>
+
+<p *ngIf="rules">Information on rules</p>
 
 <div>
-  <da-map-screen></da-map-screen>
+  <da-map-screen *ngIf="mapScreen"></da-map-screen>
   <da-dragon-info></da-dragon-info>
 </div>

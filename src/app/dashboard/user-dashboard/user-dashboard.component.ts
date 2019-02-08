@@ -7,6 +7,22 @@ import { Component } from '@angular/core';
 })
 export class UserDashboardComponent {
 
+mapScreen = false;
+buttons = true;
+rules = false;
+buttonName: any = 'Rules';
 
+rulesButton() {
+  this.rules = !this.rules;
+  if (this.rules) {
+    this.buttonName = 'Hide Rules';
+  } else {
+    this.buttonName = 'Rules';
+  }
+}
 
+startButton() {
+  this.buttons = false;
+  this.mapScreen = true;
+}
 }
