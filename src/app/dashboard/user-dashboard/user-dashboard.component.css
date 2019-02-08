@@ -1,9 +1,36 @@
-div {
-  width: 100%;
+nav {
+  margin-bottom: 3%;
+  margin-top: 3%;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Stalinist One', cursive;
 }
 
 p {
-  color: white;
+  text-align: center;
+  font-family: 'Sarpanch', sans-serif;
+  margin-bottom: 4%;
+}
+
+article {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+}
+
+#rulesButton {
+margin-right: 5%;
+}
+
+#startButton {
+margin-left: 5%;
+}
+
+div {
+  width: 100%;
 }
 
 #dragonInfo {
